@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Your Comments</title>
+</head>
+
+<body style="background-color: antiquewhite;">
+    <h1 style="text-align: center; text-decoration: underline;">Please add your comments</h1>
+    <div id="comment-container">
+        <hr>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus tenetur sequi ipsa suscipit, temporibus,
+            ducimus ea sit nisi quo dolores quas maxime rem quae perspiciatis eveniet! Eligendi doloribus beatae
+            provident asperiores itaque iure unde suscipit aspernatur? Reiciendis cupiditate modi ratione culpa,
+            nostrum, voluptas inventore dignissimos a, quis amet ab? Impedit?</p>
+            <hr>
+        <p>Autem suscipit architecto nesciunt neque rerum? Neque sequi incidunt eius consectetur voluptate ducimus,
+            quasi placeat. Sequi nam vitae reiciendis velit perferendis facere aliquid architecto numquam consequatur
+            necessitatibus accusamus asperiores esse quia ex accusantium ad quae non aperiam dolorem dignissimos amet
+            at, iste quas. Excepturi, quia molestias inventore iste reiciendis nobis.</p>
+            <hr>
+        <p>Optio animi, ipsum unde perferendis nesciunt rem, necessitatibus ratione sapiente tempora, harum voluptatum
+            fugit. Rerum illum, obcaecati quos ad repudiandae eum et nihil qui modi blanditiis, commodi consequuntur,
+            facilis neque cumque aspernatur distinctio doloremque voluptas est sequi aliquid exercitationem esse vel
+            minus impedit. Et eius quaerat maxime, laborum consequuntur placeat?</p>
+            <hr>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="60" rows="5" style="border-radius: 10px;"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+    </div>
+    <script>
+        document.getElementById("btn-post").addEventListener('click', function () {
+            const commentBox = document.getElementById("new-comment");
+            const newComment = commentBox.value;
+
+            const commentContainer = document.getElementById("comment-container");
+            const p = document.createElement('p');
+            p.innerText = newComment;
+            commentContainer.appendChild(p); 
+            const hr = document.createElement('hr');
+            commentContainer.appendChild(hr); 
+            commentBox.value='';
+        });
+    </script>
+</body>
+
+</html>
